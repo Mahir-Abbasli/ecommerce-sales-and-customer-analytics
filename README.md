@@ -78,6 +78,6 @@ Ecommerce_Analytics_Project/
 
 ## Author
 
-**Maher Abbasi**
+**Mahir Abbasli**
 
 SQL | Microsoft Power BI | DAX
