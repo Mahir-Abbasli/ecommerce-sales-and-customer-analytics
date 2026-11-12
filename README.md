@@ -1,112 +1,9 @@
 # E-Commerce Sales & Customer Analytics
-### End-to-End Data Analytics Project | SQL & Microsoft Power BI
+### SQL | Microsoft Power BI | DAX
 
-This project explores e-commerce sales and customer data using SQL and Microsoft Power BI. I worked with the Olist Brazilian E-Commerce dataset to analyze sales performance, customer purchasing behavior, and seller activity.
+An end-to-end data analytics project using the Brazilian E-Commerce dataset by Olist. The project focuses on sales performance, customer behavior, and seller activity through SQL analysis and interactive Power BI dashboards.
 
-The goal was to take raw transactional data, prepare it for analysis, and build interactive dashboards that make business performance easier to understand.
-
-## Project Overview
-
-**Domain:** E-Commerce & Business Intelligence
-
-**Tools:** SQL, Microsoft Power BI, DAX, Power Query
-
-The analysis is organized into three dashboard pages:
-
-- Executive Overview
-- Customer & Purchase Behavior
-- Seller Performance
-
-## 1. Dataset
-
-**Source:** [Brazilian E-Commerce Public Dataset by Olist – Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-
-The dataset contains information about orders, customers, products, sellers, payments, reviews, and geographical locations.
-
-I used the relevant CSV files to build the analytical dataset and carry out the business analysis.
-
-The original CSV files are not included in this repository. They can be downloaded directly from Kaggle.
-
-To reproduce the analysis, download the dataset and place the CSV files in a local `data/raw/` folder before preparing the database.
-
-## 2. Tools & Technologies
-
-| Tool | How I used it |
-|---|---|
-| SQL | Data exploration, preparation, validation and analysis |
-| Microsoft Power BI | Building interactive dashboards |
-| DAX | Creating measures and business KPIs |
-| Power Query | Data transformation |
-| Data Modeling | Connecting tables and building the analytical model |
-
-## 3. Project Workflow
-
-I divided the project into the following stages:
-
-1. **Data Exploration** – Examined the source files and understood the structure of the data.
-2. **Data Preparation** – Created raw and staging tables and prepared the data for analysis.
-3. **Data Quality Checks** – Checked data consistency, missing values and relationships.
-4. **SQL Analysis** – Wrote queries to analyze sales, customers, sellers and delivery performance.
-5. **Data Modeling** – Built the analytical model in Power BI.
-6. **DAX Development** – Created measures for the main business metrics.
-7. **Dashboard Development** – Built and formatted three report pages.
-8. **Final Validation** – Checked the calculations, visuals and report interactions.
-
-## 4. Power BI Dashboards
-
-### Page 1 – Executive Overview
-
-This page provides an overview of the business and its sales performance.
-
-Main metrics and visuals:
-
-- Total Orders
-- Delivered Orders
-- Delivered Revenue
-- Average Order Value
-- Monthly Revenue Trend
-- Revenue by Customer State
-- Top 10 Product Categories
-- Orders by Day of Week
-
-**Purpose:** To understand overall sales performance, revenue trends and the main contributors to revenue.
-
-### Page 2 – Customer & Purchase Behavior
-
-This page focuses on customer purchasing patterns and repeat purchases.
-
-Main metrics and visuals:
-
-- Total Customers
-- Average Orders per Customer
-- Repeat Customers
-- Repeat Customer Rate
-- One-Time Customers
-- Customer Purchase Segmentation
-- Repeat Customer Rate by State
-- Customer & Revenue Performance by State
-
-**Purpose:** To understand customer retention, purchasing frequency and differences in customer behavior across states.
-
-### Page 3 – Seller Performance
-
-This page looks at seller revenue and sales activity.
-
-Main metrics and visuals:
-
-- Total Sellers
-- Seller Revenue
-- Top 10 Sellers by Revenue
-- Top 10 Sellers Revenue Share
-- Average Item Price
-- Seller Revenue per Delivered Order
-- Average Items per Delivered Order
-- Seller Revenue by State
-- Seller Revenue & Performance Details
-
-**Purpose:** To identify the strongest sellers, compare their revenue contribution and examine seller performance across different states.
-
-## 5. Dashboard Screenshots
+## Dashboard Preview
 
 ### Executive Overview
 ![Executive Overview](screenshots/Executive%20Overview.png)
@@ -117,92 +14,70 @@ Main metrics and visuals:
 ### Seller Performance
 ![Seller Performance](screenshots/Seller%20Performance.png)
 
-## 6. Key Business Metrics
+## Project Overview
 
-Some of the main metrics calculated in this project:
+**Dataset:** [Brazilian E-Commerce Public Dataset – Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-| Metric | Description |
-|---|---|
-| Total Orders | Number of unique orders |
-| Delivered Orders | Number of successfully delivered orders |
-| Delivered Revenue | Revenue from delivered orders |
-| Average Order Value | Delivered Revenue / Delivered Orders |
-| Total Customers | Number of unique customers |
-| Repeat Customers | Customers with more than one delivered order |
-| Repeat Customer Rate | Percentage of customers making repeat purchases |
-| One-Time Customers | Customers with only one delivered order |
-| Seller Revenue | Revenue attributed to sellers |
-| Top 10 Sellers Revenue Share | Share of total revenue generated by the top 10 sellers |
+**Tools:** SQL, Microsoft Power BI, DAX, Power Query
 
-## 7. SQL Analysis
+The project includes three main dashboard pages:
 
-The SQL scripts are organized into three folders:
+- **Executive Overview** – Sales, revenue trends, orders, and product categories.
+- **Customer & Purchase Behavior** – Customer retention, repeat purchases, and purchasing patterns.
+- **Seller Performance** – Seller revenue, rankings, and performance comparisons.
 
-- **setup/** – Creation of raw and staging tables.
-- **data_quality/** – Validation and integrity checks.
-- **analysis/** – Business analysis queries covering sales, monthly trends, customer behavior, segmentation, seller performance and delivery satisfaction.
+## What I Did
 
-The analysis scripts are numbered to make them easier to follow.
+- Explored and prepared the raw CSV datasets using SQL.
+- Created raw and staging tables.
+- Performed data quality and integrity checks.
+- Analyzed sales, customer behavior, seller performance, and delivery metrics.
+- Built the analytical data model in Power BI.
+- Created DAX measures for business KPIs.
+- Designed three interactive dashboard pages.
 
-## 8. Data Model
+## Key Metrics
 
-The Power BI model connects the main sales data with customer, product, seller and date-related information.
+- Total Orders & Delivered Orders
+- Delivered Revenue & Average Order Value
+- Total Customers & Repeat Customer Rate
+- One-Time Customers
+- Seller Revenue & Top 10 Sellers Revenue Share
+- Average Items per Delivered Order
 
-This structure allows the report to analyze business performance from different perspectives, including customers, products, sellers and time periods.
-
-DAX measures are used throughout the dashboards to calculate the main KPIs.
-
-## 9. Repository Structure
+## Repository Structure
 
 ```text
 Ecommerce_Analytics_Project/
 │
-├── README.md
-│
 ├── sql/
 │   ├── setup/
-│   │   ├── 01_raw_tables.sql
-│   │   └── 02_staging_tables.sql
-│   │
 │   ├── data_quality/
-│   │   ├── 01_raw_validation.sql
-│   │   ├── 02_staging_validation.sql
-│   │   └── 03_integrity_checks.sql
-│   │
 │   └── analysis/
-│       ├── 01_order_sales_model.sql
-│       ├── 02_sales_kpis.sql
-│       ├── 03_monthly_sales_analysis.sql
-│       ├── 04_customer_purchase_kpis.sql
-│       ├── 05_customer_segmentation.sql
-│       ├── 06_seller_performance.sql
-│       ├── 07_delivery_satisfaction.sql
-│       └── 08_seller_experience_risk.sql
 │
 ├── power_bi/
 │   ├── Ecommerce_Sales_Customer_Analytics.pbix
 │   └── Ecommerce_Sales_Customer_Analytics.pdf
 │
-└── screenshots/
-    ├── Executive Overview.png
-    ├── Customer & Purchase Behavior.png
-    └── Seller Performance.png
+├── screenshots/
+│   ├── Executive Overview.png
+│   ├── Customer & Purchase Behavior.png
+│   └── Seller Performance.png
+│
+└── README.md
 ```
 
-*The original CSV dataset is kept locally and is not included in the repository.*
+## How to Run
 
-## 10. Final Notes
+1. Download the Olist dataset from Kaggle.
+2. Place the CSV files in the local `data/raw/` folder.
+3. Run the SQL scripts in order.
+4. Open the Power BI file to explore the dashboards.
 
-This project gave me the opportunity to work through a complete data analytics process, from exploring raw data and writing SQL queries to creating DAX measures and building Power BI dashboards.
-
-It also helped me practice presenting business data in a structured way and turning analytical results into information that can support business decisions.
-
-**Note:** Monetary values in the original Olist dataset are in Brazilian Real (BRL). No currency conversion is applied in this project.
+*Note: The original CSV files are not included in this repository. All monetary values are in Brazilian Real (BRL).*
 
 ## Author
 
 **Maher Abbasi**
-
-E-Commerce Sales & Customer Analytics
 
 SQL | Microsoft Power BI | DAX
